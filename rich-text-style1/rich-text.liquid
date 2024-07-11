@@ -1,0 +1,144 @@
+<style>
+
+    #rich-text-main-wrapper {
+       background-color: {{section.settings.f-bg-color}}; 
+    }
+    .rich-text-container {
+       background: {{section.settings.bg-color}}; 
+      /* background-image: url({{section.settings.rich-bg-img | image_url}}); */
+      background-size: cover;
+      padding: 60px; 
+      position: relative;
+    }
+  
+      
+        #rich-text-wrapper {
+            max-width: 100%; 
+            width: 1600px;
+            margin: 0px auto;
+           color: {{section.settings.text-color}};
+        }
+        
+        .rich-text-row {
+              max-width: 100%; 
+              width: 700px;
+              margin: auto;
+              text-align: center;
+        }
+  
+  
+           #rich-text-wrapper .m-richtext__description p, #rich-text-wrapper span, #rich-text-wrapper .m\:text-black {
+              color: {{section.settings.text-color}};
+          }
+  
+     #rich-text-main-wrapper .rich-text-btn {
+      color: {{section.settings.btn-text-color}};
+      background: #fff;
+    }
+  
+        @media(max-width: 768px){
+            /* .rich-text-container:before {
+              position: absolute;
+              content: "";
+              top: 0;
+              left: 0;
+              width: 100%;
+              background: black;
+              height: 100%;
+              z-index: 1;
+              opacity: 0.5;
+          } */
+         .rich-text-container {
+                background-image: url({{section.settings.rich-bg-m-img | image_url}});
+            }
+        }
+  
+  </style>
+  
+  <div id="rich-text-main-wrapper">
+      <div id="rich-text-wrapper" class="m-rich-section-my">
+          <div class="rich-text-container">
+              <div class="rich-text-row">
+                  <h3 class="m-richtext__title m:text-black h2">{{ section.settings.heading }}</h3>
+                  <div class="m-richtext__description rte m:text-color-subtext ">
+                      <p>{{ section.settings.des }}</p>
+                  </div>
+                  <div class="m-richtext__button content__button">
+                      <a href="{{ section.settings.BtnURL }}" class="m-button rich-text-btn">{{ section.settings.btn-text }}</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  {% schema %}
+    {
+      "name": "rich text",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Rich Text"
+        },
+        {
+          "type": "color",
+          "id": "f-bg-color",
+          "label": "Full with Background Color",
+          "info": "Full With Background Color"
+        },
+        {
+          "type": "color",
+          "id": "bg-color",
+          "label": "Background Color",
+          "info": "Background Color"
+        },
+        {
+          "type": "color",
+          "id": "btn-text-color",
+          "label": "Button Text Color"
+        },
+        {
+          "type": "color",
+          "id": "text-color",
+          "label": "Text Color",
+          "info": "Text Color"
+        },
+        {
+          "type": "image_picker",
+          "id": "rich-bg-img",
+          "label": "Background Image",
+          "info": "Desktop Background Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "rich-bg-m-img",
+          "label": "Background Image",
+          "info": "Mobile Background Image"
+        },
+        {
+          "type": "html",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "richtext",
+          "id": "des",
+          "label": "description"
+        },
+        {
+          "type": "text",
+          "id": "btn-text",
+          "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "BtnURL",
+          "label": "Button URL"
+        }
+      ],
+      "presets": [
+        {
+          "name": "rich text"
+        }
+      ]
+    }
+  {% endschema %}
