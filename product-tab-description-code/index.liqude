@@ -1,0 +1,80 @@
+//html
+<div class="product-tabs">
+  <ul class="tab-titles">
+    <li class="active" data-tab="description">Description</li>
+    <li data-tab="additional-info">Additional Information</li>
+    <li data-tab="reviews">Reviews</li>
+  </ul>
+  
+  <div class="tab-content active" id="description">
+    {{ product.description }}
+  </div>
+  
+  <div class="tab-content" id="additional-info">
+    <!-- Add your additional information content here -->
+    <p>Here you can add additional information about the product.</p>
+  </div>
+  
+  <div class="tab-content" id="reviews">
+    <!-- Add your reviews content here -->
+    <p>Here you can add customer reviews or integrate a reviews app.</p>
+  </div>
+</div>
+
+
+----------css ---------
+.product-tabs {
+  margin-top: 20px;
+}
+
+.tab-titles {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.tab-titles li {
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-right: 5px;
+  background: #f1f1f1;
+}
+
+.tab-titles li.active {
+  background: #ccc;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-top: -1px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+---------- js code ---------------
+
+document.addEventListener("DOMContentLoaded", function() {
+  var tabTitles = document.querySelectorAll(".tab-titles li");
+  var tabContents = document.querySelectorAll(".tab-content");
+
+  tabTitles.forEach(function(title) {
+    title.addEventListener("click", function() {
+      var tab = this.getAttribute("data-tab");
+
+      tabTitles.forEach(function(item) {
+        item.classList.remove("active");
+      });
+      this.classList.add("active");
+
+      tabContents.forEach(function(content) {
+        content.classList.remove("active");
+      });
+      document.getElementById(tab).classList.add("active");
+    });
+  });
+});
