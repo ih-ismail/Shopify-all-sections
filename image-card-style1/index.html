@@ -2,10 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=s, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Example</title>
+    <style>
+        /* product page css for custom description accordion */
+        .accordion {
+            max-width: 650px;
+        }
+
+        .at-tab {
+            display: none;
+            padding: 15px;
+            border: 1px solid #dddddd;
+            border-top: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .at-title {
+            cursor: pointer;
+            background-color: #f5f5f5;
+            position: relative;
+            transition: background-color 0.3s ease;
+        }
+
+        .at-title:hover {
+            background-color: #e0e0e0;
+        }
+
+        .at-title:after {
+            content: "+";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px;
+            transition: all 0.3s ease;
+            font-size: 24px;
+        }
+
+        .at-title.active:after {
+            content: "-";
+        }
+
+        .at-item {
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .at-title h2 {
+            font-size: 22px;
+            font-weight: 600;
+            padding: 10px 15px;
+            margin: 0;
+        }
+
+        .accordion-header {
+            text-align: center;
+            background-color: #222222;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="accordion">
+        <div class="at-item">
+            <div class="at-title active">
+                <h2>Información</h2>
+            </div>
+            <div class="at-tab" style="display: block;">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci maiores pariatur ipsam quisquam quasi atque, tenetur impedit fugit, quam vitae voluptate soluta quod ratione iste nihil perspiciatis dolorem ea odit minus, doloremque fugiat quo. Perferendis natus ex voluptates ab quibusdam! Provident quae voluptatibus numquam nesciunt blanditiis iste necessitatibus facilis ad ab quia culpa atque cumque sapiente quo itaque recusandae beatae ipsam aut id dolor est, velit modi, excepturi molestiae. Minima perspiciatis quae consequuntur ipsam aspernatur voluptas, asperiores maiores nemo dolorem possimus a consequatur iusto deleniti alias ullam culpa! Voluptatum molestias, praesentium pariatur ex deleniti ducimus aspernatur fugit molestiae maxime eligendi impedit repellat saepe cupiditate aliquam necessitatibus natus et id, quis quam omnis, eveniet officia cum blanditiis? Ducimus velit blanditiis numquam enim ab laborum beatae omnis ex minima quidem quos laudantium autem sed a, soluta necessitatibus, dignissimos consequatur hic, accusantium corporis illo ratione dolorum voluptas voluptatibus. Sequi odio animi autem id assumenda deserunt esse blanditiis numquam quasi, ad corporis. Alias nulla cum deserunt? Eum enim explicabo, deleniti id vero repellat quisquam delectus, aliquid consectetur cumque architecto suscipit amet, repellendus aliquam voluptatum perspiciatis nobis neque magni rem minima. Repellendus incidunt amet doloribus ipsa officiis nostrum tempora maiores aperiam? Odio distinctio repudiandae consequatur assumenda cumque commodi totam perferendis eum itaque nisi nostrum provident id debitis veniam nesciunt, sequi atque dicta nemo facere quisquam eligendi magni neque. Cumque voluptatum ab deserunt perferendis vitae sapiente, eligendi eaque incidunt rerum porro fuga veritatis aut neque officiis ipsum est illo nihil accusantium. Autem veniam, voluptatibus, nostrum deserunt quam reiciendis iusto nisi adipisci rerum explicabo accusantium molestias inventore eum mollitia cupiditate odit ea voluptate fuga dolore aliquam consequuntur porro. Blanditiis assumenda velit accusantium asperiores illum enim quidem dicta repellendus aliquid, maiores cupiditate necessitatibus placeat sunt minima sed, perspiciatis praesentium sequi error tempore aliquam eveniet? Alias laboriosam nemo perferendis dolorem rerum voluptates ut tempora. Porro deleniti ad dolore exercitationem error vero tempora mollitia. Expedita culpa quisquam assumenda dicta dolorem possimus magni vel ratione exercitationem harum adipisci molestias quaerat sed magnam voluptatum, porro amet sequi suscipit reiciendis? Autem harum id obcaecati necessitatibus numquam minima eligendi alias, eum iure, similique ad cupiditate minus amet velit quod recusandae aliquid ipsam ea animi ullam perferendis voluptatem adipisci repellat. Aliquid repudiandae amet eos aperiam mollitia consequatur placeat, praesentium quasi quam, est aut obcaecati earum eveniet tempora laborum, magni perspiciatis rerum voluptates fuga veniam incidunt nostrum ratione porro. Eligendi voluptatum corrupti cumque ducimus incidunt dolores rerum odit facilis quae eveniet sint labore repellat blanditiis ullam, accusantium molestias nihil excepturi qui modi in quasi impedit sit? Nam reprehenderit maxime debitis delectus dicta, sequi ab veritatis, at dolor animi maiores commodi est quas, eligendi explicabo nemo sapiente in! Minima quo rerum dolor porro commodi? Quod quidem sit repudiandae libero aliquam vero est eveniet magni saepe blanditiis iusto nam recusandae architecto minima, ullam nisi necessitatibus, dolorem quas non id tenetur atque nulla sunt. Optio accusantium aperiam, dolores, consequuntur alias aliquam veniam a corrupti saepe molestiae voluptatibus quas adipisci doloremque nesciunt animi, eum sequi quae ad? Pariatur, natus hic!
+            </div>
+        </div>
+    </div>
+
+
+    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-add-cart" viewBox="0 0 24 24"><path d="M3 6h19l-3 10H6L3 6zm0 0-.75-2.5M9.992 11h2m2 0h-2m0 0V9m0 2v2M11 19.5a1.5 1.5 0 0 1-3 0m9 0a1.5 1.5 0 0 1-3 0" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".at-title").click(function () {
+                $(this)
+                    .toggleClass("active")
+                    .next(".at-tab")
+                    .slideToggle()
+                    .parent()
+                    .siblings()
+                    .find(".at-tab")
+                    .slideUp()
+                    .prev()
+                    .removeClass("active");
+            });
+        });
+    </script>
 </body>
 </html>
