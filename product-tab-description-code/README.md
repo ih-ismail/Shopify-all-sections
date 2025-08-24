@@ -1,3 +1,2 @@
 # Home Section
-![Home Section]([./assets/screenshot-home.png](https://ibb.co.com/cKMWDYQH))
-
+![Home Screenshot](https://i.ibb.co/abcd1234/my-screenshot.png](https://ibb.co.com/cKMWDYQH)
